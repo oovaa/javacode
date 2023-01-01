@@ -1,0 +1,483 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch decodeThemessage",
+            "request": "launch",
+            "mainClass": "decodeThemessage",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch myStudent",
+            "request": "launch",
+            "mainClass": "myStudent",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch Shuffle",
+            "request": "launch",
+            "mainClass": "Shuffle",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConcatenationOfArray",
+            "request": "launch",
+            "mainClass": "ConcatenationOfArray",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cpc",
+            "request": "launch",
+            "mainClass": "Cpc",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch Fibonacci",
+            "request": "launch",
+            "mainClass": "Fibonacci",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch IsSubsequence",
+            "request": "launch",
+            "mainClass": "IsSubsequence",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch ParkingSystem",
+            "request": "launch",
+            "mainClass": "ParkingSystem",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch addbinary",
+            "request": "launch",
+            "mainClass": "addbinary",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrayPermutation",
+            "request": "launch",
+            "mainClass": "arrayPermutation",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch arraysum",
+            "request": "launch",
+            "mainClass": "arraysum",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrsum",
+            "request": "launch",
+            "mainClass": "arrsum",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch ballonnum",
+            "request": "launch",
+            "mainClass": "ballonnum",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch ballons",
+            "request": "launch",
+            "mainClass": "ballons",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch bank",
+            "request": "launch",
+            "mainClass": "bank",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch bayandsell",
+            "request": "launch",
+            "mainClass": "bayandsell",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch cnvtotitl",
+            "request": "launch",
+            "mainClass": "cnvtotitl",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch containerWithMostWatter",
+            "request": "launch",
+            "mainClass": "containerWithMostWatter",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch countingBits",
+            "request": "launch",
+            "mainClass": "countingBits",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch countundoubled",
+            "request": "launch",
+            "mainClass": "countundoubled",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch cpc",
+            "request": "launch",
+            "mainClass": "cpc",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch cpc2",
+            "request": "launch",
+            "mainClass": "cpc2",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch cpc3",
+            "request": "launch",
+            "mainClass": "cpc3",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch cpc4",
+            "request": "launch",
+            "mainClass": "cpc4",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch cpc5",
+            "request": "launch",
+            "mainClass": "cpc5",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch cpca",
+            "request": "launch",
+            "mainClass": "cpca",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch datastruc",
+            "request": "launch",
+            "mainClass": "datastruc",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch desbinary",
+            "request": "launch",
+            "mainClass": "desbinary",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch dreamTeam",
+            "request": "launch",
+            "mainClass": "dreamTeam",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch ds",
+            "request": "launch",
+            "mainClass": "ds",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch eltypedit",
+            "request": "launch",
+            "mainClass": "eltypedit",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch hash",
+            "request": "launch",
+            "mainClass": "hash",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch icecream",
+            "request": "launch",
+            "mainClass": "icecream",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch ipaddress",
+            "request": "launch",
+            "mainClass": "ipaddress",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch jframe",
+            "request": "launch",
+            "mainClass": "jframe",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch lngstcocmonstring",
+            "request": "launch",
+            "mainClass": "lngstcocmonstring",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch lolw",
+            "request": "launch",
+            "mainClass": "lolw",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch longesrString",
+            "request": "launch",
+            "mainClass": "longesrString",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch mall2",
+            "request": "launch",
+            "mainClass": "mall2",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch mergArrays",
+            "request": "launch",
+            "mainClass": "mergArrays",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch mid",
+            "request": "launch",
+            "mainClass": "mid",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch mychar",
+            "request": "launch",
+            "mainClass": "mychar",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch nofop",
+            "request": "launch",
+            "mainClass": "nofop",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch numofsentence",
+            "request": "launch",
+            "mainClass": "numofsentence",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch oneplus",
+            "request": "launch",
+            "mainClass": "oneplus",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch palindrom",
+            "request": "launch",
+            "mainClass": "palindrom",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch revers",
+            "request": "launch",
+            "mainClass": "revers",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch rmdobofsortedarr",
+            "request": "launch",
+            "mainClass": "rmdobofsortedarr",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch rmdoulecate",
+            "request": "launch",
+            "mainClass": "rmdoulecate",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch rmelem",
+            "request": "launch",
+            "mainClass": "rmelem",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch romtoint",
+            "request": "launch",
+            "mainClass": "romtoint",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch searchAlgos",
+            "request": "launch",
+            "mainClass": "searchAlgos",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch searchinsert",
+            "request": "launch",
+            "mainClass": "searchinsert",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch singlenum",
+            "request": "launch",
+            "mainClass": "singlenum",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch smof2",
+            "request": "launch",
+            "mainClass": "smof2",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch son",
+            "request": "launch",
+            "mainClass": "son",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch space_travel",
+            "request": "launch",
+            "mainClass": "space_travel",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch sqrt",
+            "request": "launch",
+            "mainClass": "sqrt",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch ss",
+            "request": "launch",
+            "mainClass": "ss",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch stears",
+            "request": "launch",
+            "mainClass": "stears",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch stringtoint",
+            "request": "launch",
+            "mainClass": "stringtoint",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch thisTest",
+            "request": "launch",
+            "mainClass": "thisTest",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch time",
+            "request": "launch",
+            "mainClass": "time",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch validpharan",
+            "request": "launch",
+            "mainClass": "validpharan",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch xor",
+            "request": "launch",
+            "mainClass": "xor",
+            "projectName": "jps_ee70afce"
+        },
+        {
+            "type": "java",
+            "name": "Launch yesoryse",
+            "request": "launch",
+            "mainClass": "yesoryse",
+            "projectName": "jps_ee70afce"
+        }
+    ]
+}
