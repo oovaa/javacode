@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 public class GridRobot {
     public static void main(String[] args) {
         int[] an = { 0, 1 };
@@ -12,25 +10,35 @@ public class GridRobot {
     static int[] executeInstructions(int n, int[] startPos, String s) {
         int ans[] = new int[s.length()];
         int x = startPos[0], y = startPos[1];
-        HashMap<Character, Integer> map = new HashMap<>();
-        map.put('L', -1);
-        map.put('R', 1);
-        map.put('U', 1);
-        map.put('D', -1);
 
         for (int i = 0; i < s.length(); i++) {
             String hold = s.substring(i);
-            int j = 0;
-            while (j < hold.length() && !(x < 0 || x >= n) && !(y < 0 || y >= n)) {
-                if ((hold.charAt(j) == 'L') || (hold.charAt(j) == 'R')) {
-                    x += map.get(hold.charAt(j));
-                    ans[i]++;
 
-                } else if ((hold.charAt(j) == 'U') || (hold.charAt(j) == 'D')) {
-                    y += map.get(hold.charAt(j));
-                    ans[i]++;
+            while (ans[i] < hold.length()) {
+                if ((hold.charAt(ans[i]) == 'L')) {
+                    if (x == 0)
+                        break;
+                    x--;
+
                 }
-                j++;
+                if ((hold.charAt(ans[i]) == 'R')) {
+                    if (x + 1 == n)
+                        break;
+                    x++;
+
+                }
+                if ((hold.charAt(ans[i]) == 'U')) {
+                    if (y == 0)
+                        break;
+                    y--;
+                }
+
+                if ((hold.charAt(ans[i]) == 'D')) {
+                    if (y + 1 == n)
+                        break;
+                    y++;
+                }
+                ans[i]++;
             }
 
             x = startPos[0];
