@@ -3,7 +3,7 @@ class quickSort {
         int[] a = { 5, 2, 4, 1, 6, 7, 8, 9, 3 };
         quicsort(a, 0, a.length - 1);
         for (int i : a) {
-            System.out.print(i+" ");
+            System.out.print(i + " ");
         }
     }
 
