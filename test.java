@@ -1,23 +1,48 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class test {
   public static void main(String[] args) {
-    ome o = new ome() {
-      void hi() {
-        System.out.println("hello");
-      }
-    };
+    man m1 = new man(0, "omer");
+    man m2 = new man(10, "ahmed");
+    man m3 = new man(20, "tata");
 
-    o.hi();
+    ArrayList<man> a = new ArrayList<>();
+    a.add(m1);
+    a.add(m2);
+    a.add(m3);
 
+    boolean isJohnAlive = a.stream().anyMatch(o -> "omer".equals(o.getName()));
+
+    System.out.println(isJohnAlive);
   }
 
-  static void toint(String s) {
+  static boolean containsName(final List<man> list, final int ag) {
+    return list.stream().anyMatch(o -> ag == (o.getAg()));
   }
 }
 
-class ome {
+class man {
+  int ag;
+  String name;
 
-  void hi() {
-    System.out.println("hiii");
+  man(int ag, String name) {
+    this.ag = ag;
+    this.name = name;
+  }
+
+  /**
+   * @return the ag
+   */
+  public int getAg() {
+    return ag;
+  }
+
+  /**
+   * @return the name
+   */
+  public String getName() {
+    return name;
   }
 }
 // int sum =0;
