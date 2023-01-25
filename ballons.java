@@ -11,7 +11,6 @@ public class ballons {
         for (int i = 0; i < s.length(); i++) {
             if (s1.matches((".*")+s.charAt(i)+(".*"))) {
                 re++;
-                
             } else {
                 re+=2;
                 s1 = s1 + s.substring(i, i + 1);

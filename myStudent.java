@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class myStudent {
     static boolean containsName(final List<Student> list, final int id) {
@@ -24,7 +25,11 @@ public class myStudent {
         Student m6 = new Student(87, "loma", 18, 1, 63, 84, 25, 2);
 
         // add some shit
-        Student.SortS();
+        Student.mergeSort(Student.students);
+
+        for (Student sa : Student.students) {
+            System.out.println(sa.getName() + " : " + sa.getGrade());
+        }
 
         loop: while (true) {
             System.out.println(
@@ -191,23 +196,138 @@ class Student {
     }
 
     double calcGrade(int hArabic, int hMath, int hDs) {
-        return (this.gDS * hDs + this.gArabic * hArabic + this.gMAth * hMath) / 3;
+        // Create an infix expression using the input hours
+        String infixExpression = "(" + hDs + " * " + this.gDS + " + " + hArabic + " * " + this.gArabic + " + "
+                + hMath + " * " + this.gMAth + ") / 3";
+
+        // Convert the infix expression to postfix notation
+        String postfixExpression = convertInfixToPostfix(infixExpression);
+
+        // Evaluate the postfix expression
+        return evaluatePostfixExpression(postfixExpression);
     }
 
-    static void SortS() {
-        for (int i = 0; i < students.size(); i++) {
-            for (int j = 0; j + 1 < students.size(); j++) {
-                if (students.get(j).grade < students.get(j + 1).grade) {
-                    Student t = students.get(j);
-                    students.set(j, students.get(j + 1));
-                    students.set(j + 1, t);
+    private String convertInfixToPostfix(String infixExpression) {
+        Stack<Character> operatorStack = new Stack<>();
+        StringBuilder postfixExpression = new StringBuilder();
+
+        for (int i = 0; i < infixExpression.length(); i++) {
+            char currentChar = infixExpression.charAt(i);
+            if (Character.isDigit(currentChar) || currentChar == '.') {
+                postfixExpression.append(currentChar);
+            } else if (currentChar == '(') {
+                operatorStack.push(currentChar);
+            } else if (currentChar == ')') {
+                while (operatorStack.peek() != '(') {
+                    postfixExpression.append(operatorStack.pop());
                 }
+                operatorStack.pop();
+            } else if (isOperator(currentChar)) {
+                while (!operatorStack.isEmpty() && operatorStack.peek() != '('
+                        && getPrecedence(currentChar) <= getPrecedence(operatorStack.peek())) {
+                    postfixExpression.append(operatorStack.pop());
+                }
+                operatorStack.push(currentChar);
             }
         }
 
-        int k = 0;
-        for (Student s : students) {
-            System.out.println(++k + "/" + s.name + " : " + s.grade);
+        while (!operatorStack.isEmpty()) {
+            postfixExpression.append(operatorStack.pop());
+        }
+
+        return postfixExpression.toString();
+    }
+
+    private boolean isOperator(char c) {
+        return c == '+' || c == '-' || c == '*' || c == '/';
+    }
+
+    private double evaluatePostfixExpression(String postfixExpression) {
+        Stack<Double> operandStack = new Stack<>();
+
+        for (int i = 0; i < postfixExpression.length(); i++) {
+            char currentChar = postfixExpression.charAt(i);
+            if (Character.isDigit(currentChar)) {
+                operandStack.push(Double.parseDouble(String.valueOf(currentChar)));
+            } else if (isOperator(currentChar)) {
+                double operand1 = operandStack.pop();
+                double operand2 = operandStack.pop();
+                double result = performOperation(operand1, operand2, currentChar);
+                operandStack.push(result);
+            }
+        }
+
+        return operandStack.pop();
+    }
+
+    private double performOperation(double operand1, double operand2, char operator) {
+        switch (operator) {
+            case '+':
+                return operand2 + operand1;
+            case '-':
+                return operand2 - operand1;
+            case '*':
+                return operand2 * operand1;
+            case '/':
+                if (operand1 == 0) {
+                    throw new IllegalArgumentException("Cannot divide by zero!");
+                }
+                return operand2 / operand1;
+            default:
+                throw new IllegalArgumentException("Invalid operator: " + operator);
+        }
+    }
+
+    private int getPrecedence(char operator) {
+        switch (operator) {
+            case '+':
+            case '-':
+                return 1;
+            case '*':
+            case '/':
+                return 2;
+            default:
+                return -1;
+        }
+    }
+
+    public static void mergeSort(List<Student> students) {
+        if (students.size() > 1) {
+            // split the list into two halves
+            int middle = students.size() / 2;
+            List<Student> left = students.subList(0, middle);
+            List<Student> right = students.subList(middle, students.size());
+
+            // recursively sort the two halves
+            mergeSort(left);
+            mergeSort(right);
+
+            // merge the sorted halves back together
+            int leftIndex = 0;
+            int rightIndex = 0;
+            int studentsIndex = 0;
+            while (leftIndex < left.size() && rightIndex < right.size()) {
+                if (left.get(leftIndex).getGrade() > right.get(rightIndex).getGrade()) {
+                    students.set(studentsIndex, left.get(leftIndex));
+                    leftIndex++;
+                } else {
+                    students.set(studentsIndex, right.get(rightIndex));
+                    rightIndex++;
+                }
+                studentsIndex++;
+            }
+
+            // copy any remaining elements from the left and right lists
+            while (leftIndex < left.size()) {
+                students.set(studentsIndex, left.get(leftIndex));
+                leftIndex++;
+                studentsIndex++;
+            }
+            while (rightIndex < right.size()) {
+                students.set(studentsIndex, right.get(rightIndex));
+                rightIndex++;
+                studentsIndex++;
+            }
         }
     }
 
