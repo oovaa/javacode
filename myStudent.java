@@ -63,6 +63,8 @@ public class myStudent {
                         int nemails = s.nextInt();
 
                         Student.addStudent(id, name, age, semester, gArabic, gMAth, gDS, nemails);
+                        Student.mergeSort(Student.students);
+
                     }
                     s.nextLine();
                     break;
