@@ -9,17 +9,18 @@ class linky {
     test.delet(1);
     test.addFirst(20);
     test.add(0, 15);
-    // System.out.println(test.isEmpty());
+    System.out.println(test.search(73));
+   // System.out.println(test.isEmpty());
     System.out.println(test);
   }
 }
 
-class node {
+class Node {
 
   int data;
-  node next;
+  Node next;
 
-  node(int data) {
+  Node(int data) {
     this.data = data;
     this.next = null;
   }
@@ -33,8 +34,8 @@ class node {
 class malink {
 
   int data;
-  node first = null;
-  node next;
+  Node first = null;
+  Node next;
   private static int size = 0;
 
   malink() {}
@@ -50,7 +51,7 @@ class malink {
   @Override
   public String toString() {
     String s = "[";
-    node curr = first;
+    Node curr = first;
 
     while (curr != null) {
       s += String.valueOf(curr.data) + ",";
@@ -60,13 +61,13 @@ class malink {
   }
 
   void add(int val) {
-    node newnode = new node(val);
-    if (first == null) first = newnode; else {
-      node curr = first;
+    Node newNode = new Node(val);
+    if (first == null) first = newNode; else {
+      Node curr = first;
       while (curr.next != null) {
         curr = curr.next;
       }
-      curr.next = newnode;
+      curr.next = newNode;
     }
     size++;
   }
@@ -79,40 +80,40 @@ class malink {
     if (index == 0) {
       addFirst(val);
     } else {
-      node newnode = new node(val);
-      node curr = first;
+      Node newNode = new Node(val);
+      Node curr = first;
 
       for (int i = 0; i < index; i++) {
         curr = curr.next;
       }
-      newnode.next = curr.next;
-      curr.next = newnode;
+      newNode.next = curr.next;
+      curr.next = newNode;
 
       size++;
     }
   }
 
   void addFirst(int val) {
-    node newnode = new node(val);
-    newnode.next = first;
-    first = newnode;
+    Node newNode = new Node(val);
+    newNode.next = first;
+    first = newNode;
   }
 
-  int search(int key) {
-    int index = -1;
-    node curr = first;
+  Node search(int key) {
+   // int index = -1;
+    Node curr = first;
     while (curr != null && curr.data != key) {
-      index++;
+     // index++;
       curr = curr.next;
     }
-    if (curr == null) return -1;
+    if (curr == null) return null;
 
-    return index + 1;
+    return curr;
   }
 
-  node delet(int key) {
-    node curr = first;
-    node pre = first;
+  Node delet(int key) {
+    Node curr = first;
+    Node pre = first;
     while (curr.data != key) {
       pre = curr;
       curr = curr.next;

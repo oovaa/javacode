@@ -1,8 +1,10 @@
+import java.util.Timer;
+
 public class searchAlgos {
     public static void main(String[] args) {
         int[] arr = { 3, 6, 9, 7, 8, 4, 2, 5, 1 };
         int ans[] = insertion(arr);
-
+        
         for (int i : ans) {
             System.out.print(i + " ");
         }
@@ -13,7 +15,7 @@ public class searchAlgos {
         int j;
         for (int i = 1; i < arr.length; i++) {
             int t = arr[i];
-            for (j = i - 1; j >= 0 && arr[j] < t; j--) { //reversed (<t)
+            for (j = i - 1; j >= 0 && arr[j] > t; j--) { //reversed (<t)
                 arr[j + 1] = arr[j];
             }
             arr[j + 1] = t;
@@ -21,20 +23,6 @@ public class searchAlgos {
 
         return arr;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     static int[] buble(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j + 1 < arr.length - i; j++) {

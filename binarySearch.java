@@ -1,12 +1,12 @@
 public class binarySearch {
     public static void main(String[] args) {
-        int[] a = new int[10];
+        int[] a = new int[1000];
         for (int i = 0; i < a.length; i++) {
-            a[i] = (int) Math.pow(2, i);
-            System.out.print(a[i] + " ");
+            a[i] = i;
+           // System.out.print(a[i] + " ");
         }
 
-        System.out.println(interpolationSearch(a, 256 ));
+        System.out.println(BinarySearch(a, 1 ));
     }
 
     static String interpolationSearch(int[] arr, int tar) {// legand
@@ -31,7 +31,7 @@ public class binarySearch {
         int val, front = 0, end = arr.length - 1, mid;
 
         while (front <= end) {
-            mid = front + (end - front) / 2;
+            mid = (front + end ) / 2;
             val = arr[mid];
             System.out.println(val);
 
