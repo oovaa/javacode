@@ -1,17 +1,19 @@
-import java.util.Scanner;
+class revers {
 
-class revers{
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        System.out.println("enter string");
-        String s1;
-        s1 =s.nextLine();
-        StringBuffer rs1 = new StringBuffer("");
-        
-        for (int i = s1.length() -1; i >=0; i--) {
-            rs1.append(s1.charAt(i));
-        }
-        System.out.println(rs1);
-        s.close();
+  public static void main(String[] args) {
+    char[] s = { 'h', 'e', 'l', 'l', 'o' };
+    reverseString(s);
+    for (char c : s) {
+      System.out.print(c + " ");
     }
+  }
+
+  static void reverseString(char[] s) {
+    char t;
+    for (int i = 0; i < s.length / 2; i++) {
+      t = s[i];
+      s[i] = s[s.length - i - 1];
+      s[s.length - i - 1] = t;
+    }
+  }
 }
