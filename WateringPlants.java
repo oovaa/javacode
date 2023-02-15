@@ -10,22 +10,22 @@ public class WateringPlants {
   }
 
   static int wateringPlants(int[] plants, int capacity) {
-    int ans = 0; // i have no idea how it workd
+    int ans = 0;
     int full = capacity;
     for (int i = 0; i < plants.length; i++) {
       if (plants[i] > capacity) {
-        ans += ((i + 1) * 2) - 2;
+        ans += i * 2;
         capacity = full;
       }
       if (capacity >= plants[i]) {
         capacity -= plants[i];
-        plants[i] = 0;
       }
       ans++;
     }
     return ans;
   }
 }
+//plants[i] = 0;
 // Input: plants = [2,2,3,3], capacity = 5
 // Output: 14
 // Explanation: Start at the river with a full watering can:
