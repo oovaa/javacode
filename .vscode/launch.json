@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch DeleteColumnstoMakeSorted",
+      "request": "launch",
+      "mainClass": "DeleteColumnstoMakeSorted",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
       "name": "Launch SeparatetheDigitsinanArray",
       "request": "launch",
       "mainClass": "SeparatetheDigitsinanArray",

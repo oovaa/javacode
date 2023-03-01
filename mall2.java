@@ -164,7 +164,7 @@ public class mall2 {
                 System.out.println("still wanna shop? n =no : any thing else = yes");
                 answer = s.next().charAt(0);
                 if (answer == 'n') {
-                    Cusromer.printMyProducts();
+                    Customer.printMyProducts();
                     redo = false;
                     break;
                 }
