@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "FindTriangularSumofanArray",
+      "request": "launch",
+      "mainClass": "FindTriangularSumofanArray",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
       "name": "Launch DeleteColumnstoMakeSorted",
       "request": "launch",
       "mainClass": "DeleteColumnstoMakeSorted",
