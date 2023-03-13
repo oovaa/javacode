@@ -24,10 +24,10 @@ printf("hi\n");
   // 	"description": "Log output to console"
   // }
 
-  "Print": {
-    "scope": "python",
-    "prefix": "print",
-    "body": ["print(${TM_SELECTED_TEXT:'${1:here}'})", "$2"],
-    "description": "print in terminal"
-  }
+  // "Print": {
+  //   "scope": "python",
+  //   "prefix": "print",
+  //   "body": ["print(${TM_SELECTED_TEXT:'${1:here}'})", "$2"],
+  //   "description": "print in terminal"
+  // }
 }
