@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "IsomorphicStrings",
+      "request": "launch",
+      "mainClass": "IsomorphicStrings",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
       "name": "FindTriangularSumofanArray",
       "request": "launch",
       "mainClass": "FindTriangularSumofanArray",
