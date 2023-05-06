@@ -2,8 +2,8 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
 
-  private boolean opened[][];
-  private final int top = 0;
+  private static final int  TOP  = 0;
+  private boolean[][] opened;
   private int size;
   private int bottom;
   private int oppensites;
@@ -20,7 +20,7 @@ public class Percolation {
     oppensites = 0;
   }
 
-  public static void main(String[] args) {}
+  public static void main(String[] args)  { } 
 
   // opens the site (row, col) if it is not open already
   public void open(int row, int col) {
@@ -28,7 +28,7 @@ public class Percolation {
     opened[row - 1][col - 1] = true;
     ++oppensites;
 
-    if (row == 1) wq.union(getindex(row, col), top);
+    if (row == 1) wq.union(getindex(row, col),  TOP );
 
     if (row == size) wq.union(getindex(row, col), bottom);
 
@@ -66,7 +66,7 @@ public class Percolation {
   // is the site (row, col) full?
   public boolean isFull(int row, int col) {
     checkexception(row, col);
-    return wq.find(top) == wq.find(getindex(row, col));
+    return wq.find( TOP ) == wq.find(getindex(row, col));
   }
 
   // returns the number of open sites
@@ -76,7 +76,7 @@ public class Percolation {
 
   // does the system percolate?
   public boolean percolates() {
-    return wq.find(top) == wq.find(bottom);
+    return wq.find( TOP ) == wq.find(bottom);
   }
 
   private void checkexception(int row, int col) {

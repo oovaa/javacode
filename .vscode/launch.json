@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "algoc",
+      "request": "launch",
+      "mainClass": "algoc",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
       "name": "IsomorphicStrings",
       "request": "launch",
       "mainClass": "IsomorphicStrings",

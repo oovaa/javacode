@@ -2,16 +2,18 @@ class linky {
 
   public static void main(String[] args) {
     malink test = new malink();
-    test.add(4);
+    test.addLast(4);
     test.add(1);
     test.add(7);
     test.add(5);
-    test.delet(1);
+    test.delete(1);
     test.addFirst(20);
     test.add(0, 15);
+    test.addLast(6);
     System.out.println(test.search(73));
-   // System.out.println(test.isEmpty());
+    // System.out.println(test.isEmpty());
     System.out.println(test);
+    System.out.println(test.end);
   }
 }
 
@@ -36,6 +38,8 @@ class malink {
   int data;
   Node first = null;
   Node next;
+  Node end;
+
   private static int size = 0;
 
   malink() {}
@@ -68,7 +72,17 @@ class malink {
         curr = curr.next;
       }
       curr.next = newNode;
+      end = newNode;
     }
+    size++;
+  }
+
+  void addLast(int val) {
+    Node newNode = new Node(val);
+    if (first == null) {
+      first = newNode;
+    } else end.next = newNode;
+    end = newNode;
     size++;
   }
 
@@ -100,10 +114,10 @@ class malink {
   }
 
   Node search(int key) {
-   // int index = -1;
+    // int index = -1;
     Node curr = first;
     while (curr != null && curr.data != key) {
-     // index++;
+      // index++;
       curr = curr.next;
     }
     if (curr == null) return null;
@@ -111,7 +125,7 @@ class malink {
     return curr;
   }
 
-  Node delet(int key) {
+  Node delete(int key) {
     Node curr = first;
     Node pre = first;
     while (curr.data != key) {
