@@ -1,23 +1,25 @@
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class Deque<t> implements Iterable<t> {
 
   public static void main(String[] args) {
-    Deque<Character> t = new Deque<>();
-    t.addLast('f');
-    t.addLast('r');
-    t.addLast('u');
-    t.addLast('o');
-    t.addLast('w');
-    Iterator<Character> it = t.iterator();
-    while (it.hasNext()) {
-      System.out.println(it);
-      it.next();
+    Deque<Integer> t = new Deque<>();
+    t.addLast(1);
+    t.addLast(12);
+    t.addLast(14);
+    t.addLast(15);
+    t.addLast(16);
+    t.addLast(163);
+    for (Integer i : t) {
+      System.out.println(i);
     }
-
-
-    // System.out.println(t.removeLast());
-    // t.print();
+    // System.out.println(t.removeFirst());
+    //   Iterator<Integer> it = t.iterator();
+    //   while (it.hasNext()) {
+    //     System.out.println(it);
+    //     it.next();
+    //   }
   }
 
   Node first;
@@ -45,6 +47,8 @@ public class Deque<t> implements Iterable<t> {
   }
 
   public void addLast(t i) {
+    if (i == null) throw new IllegalArgumentException();
+
     Node newNode = new Node();
     newNode.data = i;
     size++;
@@ -60,6 +64,7 @@ public class Deque<t> implements Iterable<t> {
   }
 
   public void addFirst(t i) {
+    if (i == null) throw new IllegalArgumentException();
     Node newNode = new Node();
     newNode.data = i;
     size++;
@@ -75,6 +80,8 @@ public class Deque<t> implements Iterable<t> {
   }
 
   public t removeLast() {
+    if (isEmpty()) throw new NoSuchElementException();
+
     t d = this.last.data;
     this.last = this.last.pre;
     this.last.next = null;
@@ -82,50 +89,60 @@ public class Deque<t> implements Iterable<t> {
   }
 
   public t removeFirst() {
+    if (isEmpty()) throw new NoSuchElementException();
+
     t d = this.first.data;
     this.first = this.first.next;
     this.first.pre = null;
     return d;
   }
 
-  void print() {
-    Node cur = this.first;
-    while (cur != null) {
-      System.out.print(cur.data + ", ");
-      cur = cur.next;
-    }
-  }
+  // void print() {
+  //   Node cur = this.first;
+  //   System.out.print('[');
+  //   while (cur != null) {
+  //     System.out.print(cur.data + ", ");
+  //     cur = cur.next;
+  //   }
+  //   System.out.print(']');
+  // }
 
   @Override
   public Iterator<t> iterator() {
     return new ListIterator();
   }
 
-  class ListIterator implements Iterator<t> {
+  class ListIterator<e> implements Iterator<e> {
 
     Node cur = first;
-    int i = 0;
+
+    ListIterator() {}
 
     @Override
     public boolean hasNext() {
-      return cur!=null;
+      return cur != null;
     }
 
     @Override
-    public t next() {
-      if (!hasNext()) throw new UnsupportedOperationException("Unimplemented method 'next'");
-      t item = cur.data;
+    public e next() {
+      if (!hasNext()) throw new NoSuchElementException();
+      e item = (e) cur.data;
       cur = cur.next;
       return item;
+    }
+
+    @Override
+    public String toString() {
+      return cur.data.toString();
     }
 
     @Override
     public void remove() {
       throw new UnsupportedOperationException("Unimplemented method 'remove'");
     }
-    @Override
-    public String toString() {
-        return cur.data.toString();
-    }
+    // @Override
+    // public String toString() {
+    //   return cur.data.toString();
+    // }
   }
 }

@@ -1,42 +1,128 @@
 public class algoc {
 
   public static void main(String[] args) {
-    CQueue q = new CQueue(5);
+    CQueue c = new CQueue(6);
+    c.enQueue(4);
+    c.enQueue(5);
+    c.enQueue(6);
+    c.enQueue(7);
+    c.display();
 
-    // Fails because front = -1
-    q.deQueue();
+    // stack<Integer> s = new stack<>(6);
+    // s.push(3);
+    // s.push(32);
+    // s.push(35);
+    // s.push(63);
+    // s.pop();
+    // System.out.println(s.returnmax());
+    // squeue<Integer> s = new squeue<>(10);
+    // s.push(2);
+    // s.push(12);
+    // s.push(22);
+    // s.push(32);
+    // s.push(42);
+    // s.pop();
+    // System.out.println(s.peekfront());
+    // System.out.println(s.peekrear());
+    // s.print();
+    // CQueue q = new CQueue(5);
 
-    q.enQueue(1);
-    q.enQueue(2);
-    q.enQueue(3);
-    q.enQueue(4);
-    q.enQueue(5);
+    // // Fails because front = -1
+    // // q.deQueue();
 
-    // Fails to enqueue because front == 0 && rear == SIZE - 1
-    q.enQueue(6);
+    // q.enQueue(1);
+    // q.enQueue(2);
+    // q.enQueue(3);
+    // q.enQueue(4);
+    // q.enQueue(5);
 
-    q.display();
+    // // Fails to enqueue because front == 0 && rear == SIZE - 1
+    // q.enQueue(6);
 
-    int elem = q.deQueue();
+    // q.display();
 
-    if (elem != -1) {
-      System.out.println("Deleted Element is " + elem);
+    // int elem = q.deQueue();
+
+    // if (elem != -1) {
+    //   System.out.println("Deleted Element is " + elem);
+    // }
+    // q.display();
+
+    // q.enQueue(
+    //   7
+    // );/* Q has only one element, so we reset the queue after deleting it. */
+
+    // q.display();
+
+    // // Fails to enqueue because front == rear + 1
+    // q.enQueue(8);
+  }
+}
+
+class squeue<t extends Comparable<t>> {
+
+  stack<t> s1;
+  stack<t> s2;
+
+  squeue(int n) {
+    s1 = new stack<>(n);
+    s2 = new stack<>(n);
+  }
+
+  void push(t i) {
+    if (s1.isFull()) {
+      System.out.println("queue is full!!");
+      return;
     }
-    q.display();
+    s1.push(i);
+  }
 
-    q.enQueue(
-      7
-    );/* Q has only one element, so we reset the queue after deleting it. */
+  t pop() {
+    if (s1.isempty()) {
+      System.out.println("queue is empty!!");
+      return null;
+    }
+    while (!s1.isempty()) {
+      s2.push((t) s1.pop());
+    }
+    t i = (t) s2.pop();
 
-    q.display();
+    while (!s2.isempty()) {
+      s1.push((t) s2.pop());
+    }
+    return i;
+  }
 
-    // Fails to enqueue because front == rear + 1
-    q.enQueue(8);
+  boolean isFull() {
+    return s1.isFull();
+  }
+
+  boolean isempty() {
+    return s1.isempty();
+  }
+
+  t peekrear() {
+    return s1.peek();
+  }
+
+  t peekfront() {
+    while (!s1.isempty()) {
+      s2.push((t) s1.pop());
+    }
+    t i = s2.peek();
+
+    while (!s2.isempty()) {
+      s1.push((t) s2.pop());
+    }
+    return i;
+  }
+
+  void print() {
+    s1.print();
   }
 }
 
 // Circular Queue implementation in Java
-
 class CQueue {
 
   int SIZE; // Size of Circular Queue
@@ -163,24 +249,37 @@ class queue {
   }
 }
 
-class stack<e> {
+class stack<e extends Comparable<e>> {
 
   int top = -1;
   Object[] arr;
+  e max;
 
   stack(int n) {
     this.arr = new Object[n];
   }
 
   void push(e n) {
+    if (this.isempty()) this.max = n;
+
     if (isFull()) {
       System.out.println("stack  is full");
       return;
     }
+    upmax(n);
     this.arr[++top] = n;
   }
 
-  private boolean isFull() {
+  private void upmax(e n) {
+    int com = max.compareTo(n);
+    if (com == -1) max = n;
+  }
+
+  e returnmax() {
+    return this.max;
+  }
+
+  boolean isFull() {
     return this.top == arr.length;
   }
 
@@ -189,11 +288,25 @@ class stack<e> {
       System.out.println("stack  is empty");
       return -1;
     }
+    upmax2();
     return this.arr[top--];
   }
 
-  private boolean isempty() {
+  private void upmax2() {
+    max = (e) arr[0];
+    for (Object i : arr) {
+      if (max.compareTo((e) i) > 0) {
+        max = (e) i;
+      }
+    }
+  }
+
+  boolean isempty() {
     return this.top == -1;
+  }
+
+  e peek() {
+    return (e) this.arr[top];
   }
 
   void print() {

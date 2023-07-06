@@ -39,6 +39,16 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "deque/Deque.java",
+			"bookmarks": [
+				{
+					"line": 114,
+					"column": 11,
+					"label": ""
+				}
+			]
 		}
 	]
 }

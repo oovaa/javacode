@@ -1,6 +1,6 @@
 public class stears {
     public static void main(String[] args) {
-      System.out.println(climbStairs(7));   
+      System.out.println(climbStairs(5));   
     }
     static public int climbStairs(int n) {
     

@@ -14,7 +14,7 @@ public class CreateTargetArray {
     }
 
     static int[] createTargetArray(int[] nums, int[] index) {
-        ArrayList ans = new ArrayList<>();
+        ArrayList<Integer> ans = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             ans.add(index[i], nums[i]);
         }

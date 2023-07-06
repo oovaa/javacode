@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "matree",
+      "request": "launch",
+      "mainClass": "matree",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
+      "name": "InteractivePercolationVisualizer",
+      "request": "launch",
+      "mainClass": "InteractivePercolationVisualizer",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
+      "name": "RandomizedQueue",
+      "request": "launch",
+      "mainClass": "RandomizedQueue",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
+      "name": "Deque",
+      "request": "launch",
+      "mainClass": "Deque",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
       "name": "algoc",
       "request": "launch",
       "mainClass": "algoc",
