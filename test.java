@@ -1,14 +1,17 @@
-import java.util.HashMap;
-
 public class test {
 
   public static void main(String[] args) {
-    HashMap<Integer, Character> hh = new HashMap<>();
-    char c = 'a';
-    for (int i = 0; i < 10; i++) {
-      hh.put(i, c++);
+    String s = "RRDDLU";
+    for (int i = 0; i < args.length; i++) {
+      s =s.substring(s.indexOf(s.charAt(0)), s.length());
+      System.out.println(s);
     }
-    System.out.println(hh);
+    // HashMap<Integer, Character> hh = new HashMap<>();
+    // char c = 'a';
+    // for (int i = 0; i < 10; i++) {
+    //   hh.put(i, c++);
+    // }
+    // System.out.println(hh);
     // Random r = new Random();
     // int x = r.nextInt(7);
     // System.out.println(x);
