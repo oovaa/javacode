@@ -1,11 +1,20 @@
 public class test {
 
   public static void main(String[] args) {
-    String s = "RRDDLU";
-    for (int i = 0; i < args.length; i++) {
-      s =s.substring(s.indexOf(s.charAt(0)), s.length());
-      System.out.println(s);
+    int n = 4421;
+    int a = 1;
+    int b = 0;
+    while (n != 0) {
+      a *= n % 10;
+      b += n % 10;
+      n /= 10;
     }
+    System.out.println(a-b);
+    // String s = "RRDDLU";
+    // for (int i = 0; i < args.length; i++) {
+    //   s =s.substring(s.indexOf(s.charAt(0)), s.length());
+    //   System.out.println(s);
+    // }
     // HashMap<Integer, Character> hh = new HashMap<>();
     // char c = 'a';
     // for (int i = 0; i < 10; i++) {
