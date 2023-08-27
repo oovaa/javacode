@@ -8,7 +8,7 @@ public class IntervalsBetweenIdenticalElements {
     }
   }
 
-  static long[] getDistances(int[] arr) {
+  static long[] getDistances(int[] arr) {//TODO
     long[] ans = new long[arr.length];
     for (int i = 0; i < ans.length; i++) {
       int hold = 0;

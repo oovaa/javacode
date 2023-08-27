@@ -1,15 +1,21 @@
 public class test {
 
   public static void main(String[] args) {
-    int n = 4421;
-    int a = 1;
-    int b = 0;
-    while (n != 0) {
-      a *= n % 10;
-      b += n % 10;
-      n /= 10;
-    }
-    System.out.println(a-b);
+    StringBuffer s = new StringBuffer("abcd");
+    s.replace(0, 1, "X");
+    // s.insert(0, "X");
+    s.toString();
+    System.out.println(s);
+
+    // int n = 4421;
+    // int a = 1;
+    // int b = 0;
+    // while (n != 0) {
+    //   a *= n % 10;
+    //   b += n % 10;
+    //   n /= 10;
+    // }
+    // System.out.println(a-b);
     // String s = "RRDDLU";
     // for (int i = 0; i < args.length; i++) {
     //   s =s.substring(s.indexOf(s.charAt(0)), s.length());

@@ -1,2 +1,3 @@
-
-    // System.out.println(cur);
+ // if (i==nums.length) {
+    //     return i+1;
+    // }
