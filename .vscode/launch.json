@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "RotateString",
+      "request": "launch",
+      "mainClass": "RotateString",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
       "name": "matree",
       "request": "launch",
       "mainClass": "matree",
