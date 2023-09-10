@@ -12,7 +12,8 @@ public class DelettheMiddleNodeofaLinkedList {
   }
 
   static ListNode deleteMiddle(ListNode head) {
-    if (head.next == null) return null; // TODO: handle single element case
+    if (head == null || head.next == null) return null; // fixed
+
     int i = 0;
     ListNode tem = head;
     while (tem != null) {
