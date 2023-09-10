@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MoveZeroes",
+      "request": "launch",
+      "mainClass": "MoveZeroes",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
       "name": "RotateString",
       "request": "launch",
       "mainClass": "RotateString",

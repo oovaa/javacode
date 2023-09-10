@@ -2,7 +2,6 @@ public class DelettheMiddleNodeofaLinkedList {
 
   public static void main(String[] args) {
     ListNode head = new ListNode(1);
-
     deleteMiddle(head);
 
     // Print the resulting linked list
@@ -13,7 +12,7 @@ public class DelettheMiddleNodeofaLinkedList {
   }
 
   static ListNode deleteMiddle(ListNode head) {
-    if (head.next == null || head == null) return null; // TODO: handle single element case
+    if (head.next == null) return null; // TODO: handle single element case
     int i = 0;
     ListNode tem = head;
     while (tem != null) {
