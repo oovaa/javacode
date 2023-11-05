@@ -26,7 +26,6 @@ public class teacherChallange {
                 ans.add(arr[i]);
             }
         }
-
         return ans.toArray(new String[0]);
     }
 }

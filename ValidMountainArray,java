@@ -1,0 +1,28 @@
+class ValidMountainArray{
+    public static void main(String[] args) {
+        int[] arr1 = {2, 1};
+        boolean result1 = validMountainArray(arr1);
+        System.out.println("Output: " + result1);
+        // Output: false
+
+        int[] arr2 = {3, 5, 5};
+        boolean result2 = validMountainArray(arr2);
+        System.out.println("Output: " + result2);
+        // Output: false
+
+        int[] arr3 = {0, 3, 2, 1};
+        boolean result3 = validMountainArray(arr3);
+        System.out.println("Output: " + result3);
+        // Output: true
+        
+    }
+    public boolean validMountainArray(int[] arr) {
+        int i , j;
+        for(i = 0 , arr[i] > arr[i+1] , i++);
+        for(j = arr.length -1 , arr[j] < arr[j-1] , j--);
+        
+        
+    }
+
+    return i == j;
+}

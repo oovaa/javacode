@@ -1,7 +1,7 @@
 class addbinary {
   public static void main(String[] args) {
-    String a = "1010";
-    String b = "1011";
+    String a = "1";
+    String b = "11";
     System.out.println(addBinary(a, b));
 
     // public static String addBinary(String a, String b) {
@@ -32,24 +32,28 @@ class addbinary {
   }
 
   public static String addBinary(String a, String b) {
-    String ans = "";
-    Integer an = Integer.parseInt(a) + Integer.parseInt(b);
-    StringBuilder hold = new StringBuilder(an.toString());
+    StringBuilder result = new StringBuilder();
+        int carry = 0;
+        int i = a.length() - 1;
+        int j = b.length() - 1;
 
-    for (int i = 0, j = 1; j < hold.length(); j++, i++) {
+        while (i >= 0 || j >= 0) {
+            int sum = carry;
+            if (i >= 0)
+                sum += a.charAt(i) - '0';
+            if (j >= 0)
+                sum += b.charAt(j) - '0';
 
-      if (hold.charAt(i) == '2') {
+            result.insert(0, sum % 2);
+            carry = sum / 2;
 
-        if (hold.charAt(i - 1) == 1) {
-          hold.setCharAt(i, '0');
-          hold.setCharAt(i-1, '0');
-          hold.insert(i-1, '1');
+            i--;
+            j--;
         }
-        hold.setCharAt(i, '1');
-        hold.insert(i, '0');
-      }
-    }
-    ans = hold.toString();
-    return ans;
+
+        if (carry != 0)
+            result.insert(0, carry);
+
+        return result.toString();
   }
 }

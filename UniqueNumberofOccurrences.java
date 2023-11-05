@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UniqueNumberofOccurrences {
 
@@ -23,22 +25,23 @@ public class UniqueNumberofOccurrences {
   }
 
   static boolean uniqueOccurrences(int[] arr) {
-    Arrays.sort(arr);
-    int acc[] = new int[arr.length];
+    Map<Integer, Integer> occurrenceCount = new HashMap<>();
 
-    int j = 0;
-    for (int i = 0; i + 1 < acc.length; i++) {
-      if (arr[i] == arr[i + 1]) acc[j]++; else j++;
+    // Count the occurrences of each element
+    for (int num : arr) {
+      occurrenceCount.put(num, occurrenceCount.getOrDefault(num, 0) + 1);
     }
-    System.out.println("Input: acc = " + Arrays.toString(acc));
-    for (int i = 0; i + 1 < acc.length; i++) {
-      if (acc[i] == 0) break;
-      if (acc[i] == acc[i + 1]) {
-        return false;
+
+    // Check if the count of occurrences is unique
+    Map<Integer, Boolean> uniqueCount = new HashMap<>();
+    for (int count : occurrenceCount.values()) {
+      if (uniqueCount.containsKey(count)) {
+        return false; // Found duplicate count
       }
+      uniqueCount.put(count, true);
     }
 
-    return true;
+    return true; // All counts are unique
   }
 }
 // int[] acc = new int[arr.length];
