@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "NextGreaterElementI",
+      "request": "launch",
+      "mainClass": "NextGreaterElementI",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
       "name": "WiggleSortII",
       "request": "launch",
       "mainClass": "WiggleSortII",
