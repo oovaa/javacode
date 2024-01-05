@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Sqrtx",
+      "request": "launch",
+      "mainClass": "Sqrtx",
+      "projectName": "jps_ee70afce"
+    },
+    {
+      "type": "java",
       "name": "NextGreaterElementI",
       "request": "launch",
       "mainClass": "NextGreaterElementI",
