@@ -7,7 +7,6 @@ public class algoc {
     c.enQueue(6);
     c.enQueue(7);
     c.display();
-
     // stack<Integer> s = new stack<>(6);
     // s.push(3);
     // s.push(32);
