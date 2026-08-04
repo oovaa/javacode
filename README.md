@@ -1,7 +1,7 @@
 # Java Code Practice & Algorithms
 
 [![Java](https://img.shields.io/badge/java-17+-red.svg)](https://openjdk.org/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](COPYING)
 [![Algorithms](https://img.shields.io/badge/algorithms-data%20structures-orange.svg)]()
 
 > **Java Practice Repository** — Collection of Java algorithms, data structures, and coding practice problems.
@@ -124,7 +124,7 @@ java FileName
 
 ## 📄 License
 
-MIT License - see [COPYING](COPYING) for details.
+GPL-3.0 License - see [COPYING](COPYING) for details.
 
 ---
 
